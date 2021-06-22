@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+ *{
+     margin: 7px;
+     padding: 0;
+     font-family: sans-serif;
+
+ }
+body{
+
+    align-items: center;
+    justify-content:center;
+   
+    background-color: #222;
+}
+
+#saatbölümü{
+
+    background-color:#222;
+    width: 200px;
+    height: 100px;
+
+}
+#tarih{
+    color: cornflowerblue;
+    font-size: 50px;
+    text-align: center;
+
+}
+#tarih:hover {
+    color: #888;
+
+}
+#saat{
+color: coral;
+    font-size: 50px;
+    text-align: center;
+}
+   </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="greeting" style="color: blanchedalmond;">Hoş geldin, merhaba</h1>
+
+    <div id="saatbölümü">
+        <p id="tarih"> </p>
+        <p id="saat"></p>
+        
+
+    </div>
+    
+
+    <script>
+        setInterval(dijitalsaat,1000)
+        function dijitalsaat(){
+            var şuan=new Date()
+            var sa= şuan.getHours()
+            var dk=şuan.getMinutes()
+            var sn =şuan.getSeconds()
+            var gn=şuan.getDate()
+            var yl=şuan.getFullYear()
+            var günler=["pazar","pazartesi","salı","çarşamba","perşembe","cuma","cumartesi"]
+            var gi=günler[şuan.getDay()];
+
+            sa=(sa<10)? "0"+sa:sa;
+            dk=(dk<10)? "0"+dk:dk;
+            sn=(sn<10)? "0"+sn:sn;
+
+            var zaman=sa+":"+dk+":"+sn;
+            var saat=document.getElementById("saat").innerHTML=zaman;
+            gn=(gn<10)? gn:gn;
+    
+        }
+    </script>
+    <script>
+let fullname=prompt("lütfen adınızı giriniz.")
+let greeting=document.querySelector("#greeting")
+greeting.innerHTML = `${greeting.innerHTML} <strong style="color:white">${fullname}</strong>`
+</script>
+    
+<h1 id ="greeting" style="color: blanchedalmond;">'de buradasın :)</h1>
+
+
+
+<img src="https://loremflickr.com/520/340" alt="">
+</script>
+
+</body>
+</html>
